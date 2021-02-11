@@ -45,7 +45,6 @@ int main() {
             maze_stack->box->hasBeenVisited = true;
             maze_stack->box->isWallSolid[(direction + 2) % 4] = false;
             emptyBoxes--;
-            printf("%d\n", emptyBoxes);
         } else {
             while (!get_potential_directions(&potentialDirections,
                                              maze,
@@ -55,8 +54,6 @@ int main() {
                 for (int i = 0; i < 2; ++i) {
                     currentPosition[i] = maze_stack->position[i];
                 }
-                printf("Coordinates : {%d, %d}\n", currentPosition[0], currentPosition[1]);
-                //puts("Successfully pop");
             }
         }
     }
